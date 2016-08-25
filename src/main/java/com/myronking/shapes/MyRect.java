@@ -19,6 +19,6 @@ public class MyRect {
         int rectHeight = 120;
         p.stroke(0);
         p.fill(255,0,0);
-        p.rect(p.mouseX - rectWidth/2, p.mouseY - rectHeight/2,rectWidth,rectHeight);
+        p.rect(p.mouseX, p.mouseY,rectWidth,rectHeight);
     }
 }
