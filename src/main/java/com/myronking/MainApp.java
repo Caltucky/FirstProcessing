@@ -5,7 +5,6 @@ import main.java.com.myronking.shapes.MyPoint;
 import main.java.com.myronking.shapes.MyRect;
 import processing.core.PApplet;
 
-import java.awt.*;
 
 /**
  * Created by Myron on 8/24/2016.
@@ -28,7 +27,9 @@ public class MainApp extends PApplet {
 
 
     public void setup() {
-        frameRate(90);
+        background(0);
+        frameRate(30);
+        smooth();
         theEllipse = new MyEllipse(this);
         theRect = new MyRect(this);
         A = new MyPoint(width/4, height/4);
@@ -37,6 +38,17 @@ public class MainApp extends PApplet {
 
 /*
     public void draw() {
+        background(0);
+        if (mousePressed) {
+            theEllipse.doSomething();
+        } else {
+            rectMode(CENTER);
+            theRect.doSomething();
+        }
+    }
+*/
+
+    public void draw() {
         if (mousePressed) {
             theEllipse.doSomething();
 //        } else {
@@ -44,8 +56,8 @@ public class MainApp extends PApplet {
 //            theRect.doSomething();
         }
     }
-*/
 
+/*
     public void draw() {
         background(0);
         stroke(255,0,0);
@@ -69,6 +81,7 @@ public class MainApp extends PApplet {
             B.y = mouseY;
         }
     }
+*/
 
     public void keyPressed() {
         if(key=='c') {
